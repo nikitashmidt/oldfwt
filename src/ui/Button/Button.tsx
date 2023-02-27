@@ -1,5 +1,5 @@
-import cn from 'classnames';
 import './style.scss';
+import cn from 'classnames';
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	onClick?: () => void;
@@ -24,9 +24,6 @@ export const Button = ({
 	className,
 	isBtnOverImage
 }: IButtonProps) => {
-	const name=()=>{
-		console.log('name')
-	}
 	return (
 		<button
 			className={cn(
