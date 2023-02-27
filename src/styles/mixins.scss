@@ -1,0 +1,54 @@
+@mixin flex-all-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin font-inter-700 {
+	font-weight: 700;
+	font-family: $font-inter;
+}
+@mixin font-inter-500 {
+	font-weight: 500;
+	font-family: $font-inter;
+}
+@mixin font-inter-300 {
+	font-weight: 300;
+	font-family: $font-inter;
+}
+@mixin font-cormorant-500 {
+	font-weight: 500;
+	font-family: $font-cormorant;
+}
+@mixin font-cormorant-700 {
+	font-weight: 700;
+	font-family: $font-cormorant;
+}
+@mixin hiddenElem {
+	opacity: 0;
+	visibility: visible;
+}
+@mixin visibleElem {
+	opacity: 1;
+	visibility: visible;
+}
+@mixin resetBtn {
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+@mixin maxWidth1440 {
+	@include xl {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+}
+@mixin svgPathColor($fill) {
+    svg{
+        path {
+           fill: $fill;
+        }
+    }
+}

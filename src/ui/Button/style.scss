@@ -1,0 +1,196 @@
+@import '../../styles';
+
+.button {
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s all;
+	@include font-inter-700;
+	font-size: 12px;
+
+	&__default {
+		padding: 16px 75px;
+		color: $primary-white;
+		background-color: $primary-black;
+		border-radius: 30px;
+
+		&:not(&.button__default--disabled) {
+			&:hover,
+			&:focus {
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+			}
+		}
+
+		&--dark {
+			background-color: $accent-gold;
+
+			&:not(&.button__default--disabled) {
+				&:hover,
+				&:focus {
+					color: $primary-white;
+					box-shadow: 0px 4px 10px rgba(171, 137, 86, 0.25);
+				}
+			}
+		}
+
+		&--disabled {
+			opacity: 0.5;
+			cursor: default;
+		}
+
+		&--outlined {
+			background-color: transparent;
+			outline: 1px solid $dark-gray;
+			color: $dark-gray;
+		}
+	}
+
+	&__text {
+		@include flex-all-center;
+		gap: 12px;
+		color: $dark-gray;
+    padding: 0;
+		background: none;
+
+		a {
+			color: $dark-gray;
+		}
+
+		&:not(&.button__text--disabled) {
+			&:hover,
+			&:focus {
+				color: $primary-black;
+				a {
+					color: $primary-black;
+				}
+        @include svgPathColor($primary-black);
+				box-shadow: 0px;
+			}
+		}
+
+		&--disabled {
+			cursor: default;
+			color: $primary-light-gray;
+			a {
+				color: $primary-light-gray;
+				cursor: default;
+			}
+		}
+
+		&--dark {
+			color: $primary-light-gray;
+			a {
+				color: $primary-light-gray;
+			}
+      @include svgPathColor($primary-light-gray);
+			
+
+			&:not(&.button__text--disabled) {
+				&:hover,
+				&:focus {
+					color: $primary-white;
+          @include svgPathColor($primary-white);
+					a {
+						color: $primary-white;
+					}
+				}
+			}
+
+			&.button__text--disabled {
+				color: $secondary-gray;
+			}
+		}
+	}
+
+	&__trash {
+		padding: 6px;
+		border-radius: 4px;
+		background-color: $primary-white;
+    @include svgPathColor($dark-gray);
+
+		&--boi {
+			opacity: 0.5;
+		}
+
+		&:not(:disabled) {
+			&:hover,
+			&:focus {
+        @include svgPathColor($primary-black);
+			}
+		}
+
+		&.button__trash--disabled {
+			cursor: default;
+      @include svgPathColor($dark-gray);
+		}
+
+		&--dark {
+			background-color: $secondary-black;
+      @include svgPathColor($primary-light-gray);
+
+			&.button__trash--boi {
+				opacity: 1;
+				background: none;
+				&:hover,
+				&:focus {
+          @include svgPathColor($primary-black);
+				}
+			}
+
+			&:not(.button__trash--disabled) {
+				&:hover,
+				&:focus {
+          @include svgPathColor($primary-white);
+				}
+			}
+
+			&.button__trash--disabled {
+        @include svgPathColor($primary-light-gray);
+			}
+		}
+	}
+
+	&__theme {
+    @include svgPathColor($dark-gray);
+
+		&:hover {
+      @include svgPathColor($primary-black);
+		}
+
+		&--dark {
+			background-color: $secondary-black;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+
+			@include svgPathColor($primary-light-gray);
+
+			&:not(&.button__theme--disabled) {
+				&:hover {
+          @include svgPathColor($primary-white);
+				}
+			}
+		}
+	}
+  
+	&__circle {
+		background-color: $secondary-white;
+		border: 1px solid $primary-light-gray;
+		border-radius: 100%;
+		width: 60px;
+		height: 60px;
+
+		@include svgPathColor($dark-gray);
+
+		&--dark {
+			border-color: $secondary-black;
+			background-color: $secondary-black;
+
+      @include svgPathColor($primary-white);
+
+			&:hover {
+				background-color: #242222;
+			}
+		}
+	}
+}
