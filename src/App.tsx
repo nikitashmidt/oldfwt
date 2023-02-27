@@ -2,7 +2,7 @@ import './index.scss';
 
 const App = () => {
 	return <div className='app'>
-		Ketwirdas</div>;
+		Ketasdsadasdadwirdas</div>;
 };
 
 export default App;
