@@ -24,6 +24,9 @@ export const Button = ({
 	className,
 	isBtnOverImage
 }: IButtonProps) => {
+	const name =()=>{
+		console.log("name")
+	}
 	return (
 		<button
 			className={cn(
